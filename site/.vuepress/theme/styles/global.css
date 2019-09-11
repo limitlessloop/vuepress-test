@@ -68,6 +68,21 @@ body, html {
 	position: relative;
 }
 
+div[class~=language-js]:before {
+    content: "js";
+}
+
+div[class*=language-]:before {
+    position: absolute;
+    z-index: 3;
+    top: .8em;
+    right: 1em;
+    font-size: .75rem;
+    color: black;
+
+	user-select: none;
+}
+
 .highlight-lines {
 	position: absolute;
     top: 0;
@@ -77,6 +92,8 @@ body, html {
 	padding-top: 1.4375em;
 	font-size: 0.9em;
     line-height: 1.4;
+	user-select: none;
+	pointer-events: none;
 }
 
 .highlight-lines .highlighted {
@@ -106,7 +123,7 @@ pre[class*="language-"] {
 	hyphens: none;
 }
 
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+/* pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
 	text-shadow: none;
 }
@@ -114,7 +131,7 @@ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-select
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
 	text-shadow: none;
-}
+} */
 
 @media print {
 	code[class*="language-"],
@@ -213,3 +230,5 @@ pre[class*="language-"] {
 .token.entity {
 	cursor: help;
 }
+
+
