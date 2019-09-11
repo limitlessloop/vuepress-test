@@ -1,7 +1,19 @@
 module.exports = {
 	title: "Docs",
 	themeConfig: {
-		navbar: true
+		nav: [{
+				text: 'Home',
+				link: '/'
+			},
+			{
+				text: 'CV',
+				link: '/cv/'
+			},
+			{
+				text: 'About',
+				link: '/about/'
+			},
+		]
 	},
 	plugins: [
 		['container', {

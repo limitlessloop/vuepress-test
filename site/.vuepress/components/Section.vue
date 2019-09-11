@@ -1,6 +1,6 @@
 <template>
-	<div class="pl-inherit pr-inherit pt-8 pb-10 w-viewport">
-		<div class="wrapper ml-auto mr-auto max-w-2">
+	<div class="Section pl-inherit pr-inherit pt-8 pb-10">
+		<div class="wrapper ml-auto mr-auto">
 			<slot />
 		</div>
 	</div>

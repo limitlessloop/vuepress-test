@@ -7,3 +7,6 @@
 		<Footer />
 	</App>
 </template>
+
+<style>
+</style>
