@@ -16,3 +16,41 @@
 .header-anchor {
 	display: none;
 }
+
+a {
+	text-decoration: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#app {
+	height: 100%;
+}
+
+.App {
+	height: 100%;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+}
+
+.App > * {
+	flex-grow: 1;
+}
+
+.App > .Footer,
+.App > .Navbar {
+	flex-grow: 0;
+}
+
+body, html {
+
+}

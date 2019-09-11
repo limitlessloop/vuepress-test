@@ -1,5 +1,5 @@
 <template>
-	<header class="navbar">
+	<header class="Navbar">
 
 		<router-link :to="$localePath" class="home-link">
 			<img

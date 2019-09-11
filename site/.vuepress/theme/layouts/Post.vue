@@ -2,8 +2,10 @@
 	<App>
 		<Navbar />
 		<div class="Body">
-			<Posts page="posts" />
-			<Footer />
+			<h1>{{ $page.title }}</h1>
+			<Content />
 		</div>
+		<Footer />
 	</App>
 </template>
+
