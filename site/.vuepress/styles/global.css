@@ -1,3 +1,18 @@
+.bt {
+	border-top-width: 1px;
+}
+.br {
+	border-right-width: 1px;
+}
+.bb {
+	border-bottom-width: 1px;
+}
+.bl {
+	border-left-width: 1px;
+}
 .warning {
     background-color: #DDDDDD;
+}
+.header-anchor {
+	display: none;
 }
