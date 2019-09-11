@@ -1,4 +1,4 @@
-<template>
+<template lang="phtml">
 	<App>
 		<Navbar />
 		<div class="Body">
@@ -7,3 +7,5 @@
 		<Footer />
 	</App>
 </template>
+
+

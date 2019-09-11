@@ -1,4 +1,11 @@
 module.exports = {
+	postcss: {
+		plugins: [
+			require("postcss-import"),
+			require('autoprefixer'),
+			require("postcss-extend-rule")
+		]
+	},
 	title: "Docs",
 	themeConfig: {
 		nav: [{
@@ -15,7 +22,19 @@ module.exports = {
 			},
 		]
 	},
+	chainWebpack: config => {
+		config.module
+			.rule('phtml')
+			.test(/\.html$/)
+			.use('phtml-loader')
+			.loader('phtml-loader')
+			.options({
+				plugins: [require('@phtml/image-alt')]
+			})
+			.end()
+	},
 	plugins: [
+		'clean-urls',
 		['container', {
 			type: 'warning',
 			defaultTitle: {

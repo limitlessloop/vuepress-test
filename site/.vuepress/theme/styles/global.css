@@ -1,3 +1,10 @@
+@import 'karamel';
+
+.red {
+	font-size: 60px;
+	color: red;
+}
+
 .bt {
 	border-top-width: 1px;
 }

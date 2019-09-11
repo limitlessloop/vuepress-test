@@ -1,10 +1,25 @@
 <template>
 	<header class="Navbar">
-		<div v-for="link in userNav">
+		<template v-for="link in userNav">
 			<router-link :to="link.link">{{link.text}}</router-link>
-		</div>
+		</template>
 	</header>
 </template>
+
+<style scoped>
+/* @import 'karamel'; */
+
+.Navbar {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 100px;
+	user-select: all;
+}
+.Navbar a {
+	margin-left: 20px;
+	@extend .red;
+}
+</style>
 
 <script>
 export default {

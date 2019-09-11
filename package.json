@@ -11,5 +11,19 @@
     "build": "vuepress build site"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "phtml": "^4.1.0",
+    "phtml-loader": "^1.1.0",
+    "postcss": "^7.0.18",
+    "postcss-loader": "^3.0.0"
+  },
+  "dependencies": {
+    "@phtml/image-alt": "^4.1.0",
+    "autoprefixer": "^9.6.1",
+    "postcss-extend-rule": "^3.0.0",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.1.2",
+    "vuepress-plugin-clean-urls": "^1.0.3"
+  }
 }

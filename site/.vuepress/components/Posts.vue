@@ -20,7 +20,7 @@ export default {
 			let currentPage = this.page ? this.page : this.$page.path
 			let posts = this.$site.pages
 				.filter(x => {
-					return x.path.match(new RegExp(`(${currentPage})(?=.*html)`))
+					return x.path.match(new RegExp(`(${currentPage})`))
 				})
 				.sort((a, b) => {
 					return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
