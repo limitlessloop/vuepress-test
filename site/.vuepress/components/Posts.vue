@@ -5,7 +5,6 @@
 				<h2>
 					<router-link :to="post.path">{{post.frontmatter.title}}</router-link>
 				</h2>
-				<pre></pre>
 				<p>{{post.frontmatter.description}}</p>
 			</div>
 		</div>
