@@ -1,4 +1,28 @@
 module.exports = {
+	extendPageData($page) {
+		const {
+			_filePath, // file's absolute path
+			_computed, // access the client global computed mixins at build time, e.g _computed.$localePath.
+			_content, // file's raw content string
+			_strippedContent, // file's content string without frontmatter
+			key, // page's unique hash key
+			frontmatter, // page's frontmatter object
+			regularPath, // current page's default link (follow the file hierarchy)
+			path, // current page's real link (use regularPath when permalink does not exist)
+		} = $page
+
+		// 1. Add extra fields.
+
+		// $page.xxx = $page._content
+
+		// 2. Change frontmatter.
+		// frontmatter.sidebar = _computed
+	},
+	head: [
+		['script', {
+			src: '/svg-inject.js'
+		}]
+	],
 	postcss: {
 		plugins: [
 			require("postcss-import"),
@@ -51,5 +75,12 @@ module.exports = {
 			before: info => `<Section><p class="title">${info}</p>`,
 			after: '</Section>'
 		}]
-	]
+	],
+	markdown: {
+		extendMarkdown: md => {
+			// use more markdown-it plugins!
+			md.use(require('markdown-it-attrs'))
+			md.use(require('markdown-it-plantuml'))
+		}
+	}
 };

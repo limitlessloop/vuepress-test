@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<div class="posts" v-if="posts.length">
-			<div class="post" v-for="post in posts">
+		<div class="posts" v-if="children.length">
+			<div class="post" v-for="child in children">
 				<h2>
-					<router-link :to="post.path">{{post.frontmatter.title}}</router-link>
+					<router-link :to="child.path">{{child.frontmatter.title}}</router-link>
 				</h2>
-				<p>{{post.frontmatter.description}}</p>
+				<p>{{child.frontmatter.description}}</p>
 			</div>
 		</div>
 	</div>
@@ -15,16 +15,17 @@
 export default {
 	props: ['page'],
 	computed: {
-		posts() {
-			let currentPage = this.page ? this.page : this.$page.path
-			let posts = this.$site.pages
+		children() {
+			let page = this.page ? this.page : this.$page.path
+			let children = this.$site.pages
 				.filter(x => {
-					return x.path.match(new RegExp(`(${currentPage})`))
+					// console.log(x.path)
+					return x.path.match(new RegExp(`^/${page}/`))
 				})
 				.sort((a, b) => {
 					return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
 				})
-			return posts
+			return children
 		}
 	}
 }

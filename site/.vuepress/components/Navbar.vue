@@ -13,7 +13,6 @@
 	display: flex;
 	justify-content: flex-end;
 	margin-bottom: 100px;
-	user-select: all;
 }
 .Navbar a {
 	margin-left: 20px;

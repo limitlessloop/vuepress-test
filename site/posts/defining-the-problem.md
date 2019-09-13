@@ -10,6 +10,10 @@ I found a lot of the time before try to design they often miss out Norwich that 
 
 when designing something we often need to know what to design build we therefore naturally right specifications which I use to help us now how our products should look what it should do.  this is a common practice within software companies design agencies to write functional specifications.
 
+@startuml
+Bob -> Alice : hello
+@enduml
+
 <!-- more -->
 
 The designers job it's not seeing you be the Gatekeeper of your product full stop and the gate the designer becomes the Gatekeeper when all the decisions around the products are seen through the eyes of the designers visuals and cups and prototypes. I wonder if this is because many people see the relationship with the designer as a one dimensional relationship where the clients tells the designer what they want and expects the designer to be a person who was someone who can use the tools they cant.
