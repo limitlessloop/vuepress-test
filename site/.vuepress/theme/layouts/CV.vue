@@ -2,10 +2,11 @@
 	<App>
 		<Navbar />
 		<div class="Body">
+			<!-- <Posts page="projects" @newdata="handleData($event)" /> -->
 			<pre>
-			{{ getMatchingContent }}
+			{{ page().children() }}
 			</pre>
-			<div class="post" v-for="post in posts">
+			<div class="post" v-for="post in page('posts').children()">
 				<p>{{post.frontmatter.description}}</p>
 			</div>
 			<Content />
@@ -39,6 +40,11 @@ export default {
 				})
 			return children
 		}
+		// handleData(e) {
+		// 	// console.log(e)
+		// 	this.children = e
+		// 	console.log(this.children)
+		// }
 	}
 }
 </script>
